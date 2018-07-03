@@ -1,15 +1,24 @@
+/* Implement a program that determines whether a provided credit card number is valid according to Luhn’s algorithm */
+
+/* Luhn’s algorithm
+1.Multiply every other digit by 2, starting with the number’s second-to-last digit, and then add those products' digits together.
+
+2.Add the sum to the sum of the digits that weren’t multiplied by 2.
+
+3.If the total’s last digit is 0 (or, put more formally, if the total modulo 10 is congruent to 0), the number is valid! */
+
 #include<stdio.h>
 #include<cs50.h>
 
 int main(){
-long number,x,number1,number3;
+long number,ccn,number1,number3; //ccn=credit card number and number,number1,number2 are used to make copies of ccn for further use
 int sum=0,sum1=0,digit=0,digit1=0,y,z,p;
 do{
-x=get_long_long();
-}while(x<0);
-number=x;
-number1=x;
-number3=x;
+ccn=get_long_long(); //prompt user for ccn
+}while(ccn<0);
+number=ccn;
+number1=ccn;
+number3=ccn;
 while(number>0){
 	number=number/10;
 	y=number%10;
@@ -26,8 +35,8 @@ while(number1>0){
 	sum1=sum1+y;
 	number1=number1/100;
 }
-while(x>0){
-	x=x/10;
+while(ccn>0){
+	ccn=ccn/10;
 	digit+=1;
 }
 digit1=digit;
