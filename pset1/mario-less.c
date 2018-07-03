@@ -1,3 +1,11 @@
+/* Implement a program that prints out a half-pyramid of a specified height */
+
+/*  ##
+   ###
+  ####
+ #####
+###### */
+
 #include<stdio.h>
 #include<cs50.h>
 
