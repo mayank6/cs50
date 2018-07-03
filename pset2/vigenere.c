@@ -1,3 +1,5 @@
+/* Implement a program that encrypts messages using Vigenère’s cipher */
+
 #include<stdio.h>
 #include<cs50.h>
 #include<string.h>
