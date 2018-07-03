@@ -1,16 +1,17 @@
+/* Implement a program that calculates the minimum number of coins required to give a user change */
 #include<stdio.h>
 #include<cs50.h>
 #include <math.h>
 int main(){
-float x;
+float change;
 
 int coin,count=0;
 do{
-    x=get_float();
+    change=get_float(); //prompt user to give change value 
     
 }
-while(x<0);
-coin=x*100;
+while(change<0);
+coin=change*100; //convert dollars into cents
 while(true){
     if(coin>=25){
         count+=1;
@@ -33,5 +34,5 @@ while(true){
     break;
 }
     
-    printf("%d",count);
+    printf("%d",count); // print total number ofcoins 
 }
