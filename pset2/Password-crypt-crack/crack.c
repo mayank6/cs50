@@ -1,3 +1,4 @@
+/*Implement a program that cracks passwords for given hash using DES based*/
 #include <crypt.h>
 #include <stdio.h>
 #include <cs50.h>
